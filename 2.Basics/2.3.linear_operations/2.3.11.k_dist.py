@@ -1,9 +1,5 @@
 import numpy as np
 
-a, b = [np.array(input().split()).astype(float) for i in range(2)]
+a, b = np.array(input().split(), dtype=float), np.array(input().split(), dtype=float)
 k = int(input())
-
-ab = np.subtract(b, a)
-ac = a + np.multiply(k / (1 + k), ab)
-
-print(*ac)
+print(*(b - (b - a) / (k+1)))
