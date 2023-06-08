@@ -13,5 +13,4 @@ def proj(u, v):
 
 a, b, c = [np.array(input().split()).astype(float) for i in range(3)]
 
-
-print(round_v())
+print(round_v(np.linalg.solve(np.column_stack([a, b]), a + b + c)))
